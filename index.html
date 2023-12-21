@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Always stay ahead of everyone with the latest news and the best articles from the hacker world.">
+    <link rel="stylesheet" href="./style/style.css">
     <title> Hackers newsletter  </title>
-
 </head>
 <body>
-    
+    <header class="headerSTL">   <h1>Hacker News</h1> </header>
+    <div class="pageContainer">
+        <div class="textContainer">
+            <p>
+                Are you ready to explore the frontiers of cyber knowledge? Don't miss the opportunity to become an insider in the universe of ethical hacking, cybersecurity and cutting-edge technology!
+                Do not let this chance go by.
+            </p>
+        </div>
+        <main>
+            <form>
+                <label for="nameRegister">First Name</label>
+                <input type="text" name="userName" id="nameRegister">
+                <label for="nameRegister">Last Name</label>
+                <input type="text" name="userLastName" id="lastNameRegister">
+                <label for="emailRegister">Your email</label>
+                <input type="email" name="userEmail" id="emailRegister">
+                <p>Are you interested in cybersecurity courses?</p>
+                <label for="answerYes"><input type="radio" name="radioYes" id="answerYes" valeu="true">Yes</label>
+                <label for="answerNo"><input type="radio" name="radioYNo" id="answerNo" valeu="false">No</label>
+            </form>
+        </main>
+
+    </div>
+<script src="./script/script.js"></script>
 </body>
 </html>
