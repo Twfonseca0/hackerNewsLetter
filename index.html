@@ -8,7 +8,7 @@
     <title> Hackers newsletter  </title>
 </head>
 <body>
-    <header class="headerSTL">   <h1 tabindex="0">Hacker News</h1> </header>
+    <header class="headerSTL">   <h1 tabindex="0" class="titlePageStyle">Hacker News</h1> </header>
     <div class="pageContainer">
         <div class="textContainer">
             <p tabindex="0" class="callToActionTxt">
@@ -17,27 +17,31 @@
             </p>
         </div>
         <main>
+            <div class="divHeaderStyle">
+                    <p class="formHeaderStyle">Register to receive your ticket</p>
+            </div>
             <form class="formStyle">
-                <fieldset class="formStyle">
-                    <label tabindex="0" for="nameRegister" >First Name</label>
-                    <input tabindex="0" type="text" name="userName" id="nameRegister" class="inputStyle">
-                    <label tabindex="0" for="lastNameRegister">Last Name</label>
-                    <input tabindex="0" type="text" name="userLastName" id="lastNameRegister" class="inputStyle">
-                    <label tabindex="0" for="emailRegister">Your email</label>
-                    <input tabindex="0" type="email" name="userEmail" id="emailRegister" class="inputStyle">
+                <fieldset class="fildsetStyle">
+                    <label tabindex="0" for="nameRegister" class="textLabelStyle">First Name</label>
+                    <input tabindex="0" type="text" name="userName" id="nameRegister" class="inputStyle" placeholder="Type your first name here">
+                    <label tabindex="0" for="lastNameRegister" class="textLabelStyle">Last Name</label>
+                    <input tabindex="0" type="text" name="userLastName" id="lastNameRegister" class="inputStyle" placeholder="Type your last name here">
+                    <label tabindex="0" for="emailRegister" class="textLabelStyle">Your email</label>
+                    <input tabindex="0" type="email" name="userEmail" id="emailRegister" class="inputStyle" placeholder="Type your e-mail here">
                 </fieldset>
-                <p tabindex="0">Are you interested in cybersecurity courses?</p>
-                <label tabindex="0" for="answerYes"><input type="radio" name="radioYes" id="answerYes" valeu="true">Yes</label>
-                <label tabindex="0" for="answerNo"><input type="radio" name="radioYNo" id="answerNo" valeu="false">No</label>
-                <input tabindex="0" type="submit" name="sendInfo" id="sendBtn">
+                <p tabindex="0" class="formQuestionStyle">Are you interested in cybersecurity courses?</p>
+                <label tabindex="0" for="answerYes" class="radioBtnText"><input type="radio" name="radioYes" id="answerYes" valeu="true" class="radioBtnStyle">Yes</label>
+                <label tabindex="0" for="answerNo" class="radioBtnText"><input type="radio" name="radioYNo" id="answerNo" valeu="false" class="radioBtnStyle">No</label>
+                <input tabindex="0" type="submit" name="sendInfo" id="sendBtn" class="btnStyle">
             </form>
         </main>
-    </div>
-    <footer class="footerStyle">
-        <p tabindex="0" >
-            The hackers news letter is an offering from the <strong>hackers school</strong>
+      <footer class="footerStyle">
+        <p class="offeringTextStyle" tabindex="0" >
+            The hacker's news letter is an offering from the <strong>hacker's school</strong>
         </p>
-    </footer>
+    </footer>      
+    </div>
+
 <script src="./script/script.js"></script>
 </body>
 </html>
