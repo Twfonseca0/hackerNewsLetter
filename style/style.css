@@ -56,6 +56,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 text-align: center;
+margin-bottom: 25px;
 }
 
 .divHeaderStyle{
@@ -72,6 +73,8 @@ padding: 8px;
 .formStyle{
 position: relative;
 font-size: 17px;
+overflow: hidden;
+width: 100%;
 }
 
 .formStyle span:first-of-type{
@@ -79,39 +82,88 @@ position: absolute;
 top: 0;
 left: 0;
 width: 100%;
-height: 2px;
-background-image: linear-gradient(to right, transparent, #00e500);}
+height: 4px;
+background-image: linear-gradient(to right, transparent, #00e500);
+animation: move1 3s linear infinite;
+}
+
+@keyframes move1 {
+    0%{
+        transform: translate(-100%);
+    }
+    100%{
+        transform: translate(100%);
+    }
+    
+}
 
 .formStyle span:nth-of-type(2){
 position: absolute;
 top: 0;
 right: 0;
-width: 2px;
+width: 4px;
 height: 100%;
-background-image: linear-gradient(to right, transparent, #00e500);}
+background-image: linear-gradient(to right, transparent, #00e500);
+animation: move2 3s linear infinite 1.6s;
+}
+
+@keyframes move2 {
+    0%{
+        transform:translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
 
 .formStyle span:nth-of-type(3){
 position: absolute;
 bottom: 0;
 right: 0;
 width: 100%;
-height: 2px;
-background-image: linear-gradient(to left, transparent, #00e500);}
+height: 4px;
+background-image: linear-gradient(to left, transparent, #00e500);
+animation: move3 3s linear infinite;
+
+}
+
+@keyframes move3 {
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+    
+}
 
 .formStyle span:last-of-type{
     position: absolute;
     top: 0;
     left: 0;
-    width: 2px;
+    width: 4px;
     height: 100%;
-    background-image: linear-gradient(to left, transparent, #00e500);}
+    background-image: linear-gradient(to left, transparent, #00e500);
+    animation: move4 3s linear infinite 1.5s;
+
+}
+
+@keyframes move4 {
+    0%{
+        transform:translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
 
 .fildsetStyle{
 display: flex;
 flex-direction: column;
 justify-content: left;
 height: 40vh;
-margin: 10px 0px 0px 0px;
+margin: 20px 20px 10px 20px;
 border: none;
 }
 
@@ -123,16 +175,23 @@ margin: 4px 0px 2px 5px;
 padding: 8px;
 width: 90%;
 margin: 4px 10% 10px 10px;
+border-radius: 10px;
 }
 
 .formQuestionStyle{
-margin: 25px 0px 10px 0px;
-text-align: center;
+margin: 25px 20px 10px 20px;
+}
+
+.radioBtnContainerStyle{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
     
 .radioBtnStyle{
 margin: 10px 10px 10px 10px;
-
 }
 
 #answerNo{
@@ -141,8 +200,13 @@ margin-left: -0.5px;
 
 .btnStyle{
 width:60% ;
-margin: 15px 20% 10px 20%;
-padding:8px;
+margin: 15px 20% 30px 20%;
+padding:10px;
+border-radius: 25px;
+border: 3px solid #00e500;
+background-color: #0000;
+color: #00e500;
+font-size: 15px;
 }
 
 .offeringTextStyle{
@@ -203,3 +267,50 @@ clip-path: polygon(0 0 ,100% 0, 100% 35%, 0% 40%);
             transform: translate(-30px, 5px) skew(21deg);
         }
     }
+
+
+    @media screen and (min-width: 700px) and (max-width:1300px) {
+
+        .formStyle{
+            position: relative;
+            font-size: 17px;
+            overflow: hidden;
+            width: 80%;
+            }
+
+        .fildsetStyle{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            margin: 20px 20px 10px 20px;
+            border: none;
+            }
+            
+
+        .inputStyle{
+            padding: 8px;
+            width: 70%;
+            margin: 4px 15% 10px 15%;
+            border-radius: 10px;
+            }
+
+        .formQuestionStyle{
+            text-align: center;
+            margin: 25px 20px 10px 20px;
+            }
+
+        .radioBtnContainerStyle{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            }
+
+        .btnStyle{
+            width: 40%;
+            margin-left: 30%;
+        }
+      }
